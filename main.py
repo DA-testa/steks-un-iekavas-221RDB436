@@ -40,5 +40,5 @@ def main():
     print(mismatch)
 
 
-if name == "main":
+if __name__ == __"main"__:
     main()
