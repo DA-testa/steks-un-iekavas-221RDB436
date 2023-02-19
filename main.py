@@ -33,12 +33,24 @@ def find_mismatch(text):
     # Case when all brackets are matched
     return "Success"
 
-
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    print(mismatch)
-
+        do=input("F or I")
+        if "F" in do:
+            name = input("Enter file name: ")
+            with open(name, "r", encoding="latinl") as file:
+                text=file.read()
+            mismatch = find_mismatch(text)
+            if mismatch == "Success":
+                print("Success")
+            else:
+                print(mismatch)
+        elif "I" in do:
+            text = input()
+            mismatch = find_mismatch(text)
+            if mismatch == "Sucess":
+                print("Success")
+            else:
+                print(mismatch)
 
 if __name__ == "__main__":
     main()
